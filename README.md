@@ -19,7 +19,12 @@ python Project_Roanoke.py
 ```
 ## Usage
 ![Oo your](https://i.imgur.com/rOncynF.png)
-Using Project Roanoke is quite simple. Choese the application you want to run and enter its corresponding number. 
+### Selecting an application
+Using Project Roanoke is quite simple. Choose the application you want to run and enter its corresponding number.
+### Using applets 
+What are applets? Applets are miniature apps that can be added to make the program more customizable. 
+### Existing applets
+* IpInfo - Shows your public and local IPv4 address. (Preinstalled)
 
 
 
