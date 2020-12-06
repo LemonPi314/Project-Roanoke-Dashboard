@@ -1,6 +1,6 @@
 # Project Roanoke
 
-Project Roanoke is a command-line dashboard for some of the most popular Kali Linux tools. The dashboard also includes some useful custom applets to increase the jease of use of Kali Linux. 
+Project Roanoke is a command-line dashboard for some of the most popular Kali Linux tools. The dashboard also includes some useful custom applets to increase the ease of use of Kali Linux. 
 
 ## Requirments
 [Kali Linux](https://www.kali.org/)  
