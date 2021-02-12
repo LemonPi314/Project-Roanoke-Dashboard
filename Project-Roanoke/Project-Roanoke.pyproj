@@ -11,6 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>Project-Roanoke</Name>
     <RootNamespace>Project-Roanoke</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Project_Roanoke.py" />
+    <Compile Include="PythonTools.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
