@@ -107,11 +107,6 @@ def IPInfo():
 
     ClearScreen()
     GetIP()
-    #publicIP = get("https://api.ipify.org").text
-    #hostname = socket.gethostname()
-    #local_ip = socket.gethostbyname(hostname)
-    #localIP = [ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if ip.startswith("192.")][:1]
-    #local_ip = GetIP()
     title = open(os.path.join(titleDir, "title-ipinfo.txt"))
     PrintMessage(title.read(), "none", BrightCyan)
     PrintMessage("Your computer name is: " + netInfo[0])
