@@ -9,7 +9,6 @@
 #
 # Made by Duplexes
 
-
 # Imports needed to use this code
 import os 
 from datetime import datetime
@@ -78,6 +77,7 @@ def PrintMessage(message, prefix = "none", forceColor = None, forceLog = False):
         color = forceColor
 
     print(color + prefix + message + Reset)
+
     if log == True:
         Logger(message, prefix)
 
@@ -87,13 +87,14 @@ clear = lambda: os.system('cls' if os.name == 'nt' else 'clear')
 
 # Get the directory containing the project files
 workingDir = Path(__file__).parent
-projectDir = Path(__file__).parent.parent
+projectDir = Path(__file__).parent
 logDir = os.path.join(projectDir, "logs", "log.txt")
 
 def Logger(message, prefix):
     # Get the date and time
     dateTime = datetime.now()
     dateTime = dateTime.strftime("%d/%m/%Y, %H:%M:%S")
+
     # If the log file exists, open it and log the message
     if os.path.exists(logDir):
         logfile = open(logDir, "a")
@@ -103,7 +104,7 @@ def Logger(message, prefix):
     else: 
         logfile = open(logDir, "x")
         logfile.write("[" + dateTime + "] " + "[ERROR] " + "Log file missing or inaccessible. Creating a new one." + "\n")
-        ErrorLogger(message, prefix)
+        Logger(message, prefix)
 
 # Function to clear the log file. 
 def ClearLog():
