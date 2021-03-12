@@ -2,36 +2,30 @@
 
 Project Roanoke is a command-line dashboard for some of the most popular Kali Linux tools. The dashboard also includes some useful custom applets to increase the ease of use of Kali Linux. 
 
-## Requirments
+## Requirements
 [Kali Linux](https://www.kali.org/)  
 [Python](https://www.python.org/)  
-[Git](https://github.com/)
-
+[pyconsole](https://test.pypi.org/project/pyconsole/)
 ## Installation
-
-Clone the repository
+Install the `pyconsole` package.
 ```bash
-git clone https://github.com/Duplexes/Project-Roanoke-Dashboard
+pip install -i https://test.pypi.org/simple/ pyconsole
 ```
-Go to the newly created directory and run Project_Roanoke.py
+Download the files from this web page.
+Go to the downloaded directory and run `project-roanoke.py`.
 ```bash
-python Project_Roanoke.py
+python project-roanoke.py
 ```
 ## Usage
-![Oo your](https://i.imgur.com/rOncynF.png)
-### Selecting an application
-Using Project Roanoke is quite simple. Choose the application you want to run and enter its corresponding number.
-### Using applets 
+![Image](https://i.imgur.com/rOncynF.png)
+### Selecting An Application
+Using Project Roanoke is quite simple. Choose the application you want to run and enter the corresponding number.
+### Using Applets
 What are applets? Applets are miniature apps that can be added to make the program more customizable. 
-### Existing applets
-* IpInfo - Shows your public and local IPv4 address. (Preinstalled)
-
-
-
+### Existing Applets
+* Ip Info - Shows your public and local IPv4 address. (Preinstalled)
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
 Please make sure to update tests as appropriate.
-
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT License](https://choosealicense.com/licenses/mit/)
