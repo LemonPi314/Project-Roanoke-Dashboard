@@ -1,19 +1,19 @@
-import os, socket, webbrowser #requests
+import os, socket, webbrowser
 from requests import get
 from pyconsole import *
 
-titleDir = os.path.join(projectDir, "titles")
+titleDir = os.path.join(projectDir, 'titles')
 
 # Functions
 # Main startup screen
 def MainDashboard():
     ClearScreen()
-    titles = ListFiles(titleDir, "title-project-roanoke")
+    titles = ListFiles(titleDir, 'title-project-roanoke')
     titleColors = [Color.BrightCyan, Color.BrightYellow, Color.BrightGreen, Color.BrightYellow, Color.BrightGreen]
     titleNumber = 0
     for title in titles:
-        content = open(title)
-        PrintMessage(content.read(), "none", titleColors[titleNumber])
+        content = open(title, 'r')
+        PrintMessage(content.read(), 'none', titleColors[titleNumber])
         titleNumber += 1
 
     UserInput()
@@ -48,21 +48,27 @@ def UserInput():
         # Start of selection elif statments
         # Selection: 1 - Opens web rickroll - Temporary
         elif value == 1:
-            PrintMessage("Booting selected program. This may take a second...")
-            webbrowser.register("chrome", None, webbrowser.BackgroundBrowser("C://Program Files (x86)//Google//Chrome//Application//chrome.exe"))
-            webbrowser.get("chrome").open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            PrintMessage("Booting selected program. This may take a second...", "Info")
+            webbrowser.register('chrome', None, webbrowser.BackgroundBrowser('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'))
+            webbrowser.get('chrome').open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
 
-        # Selection: 2 - Opens Fern Wifi Cracker - Placeholder 
+        # Selection: 2 - Opens Fern Wifi Cracker - Placeholder
         elif value == 2:
             ClearScreen()
-            PrintMessage("Fern Wifi Cracker Placeholder")
+            PrintMessage("Fern Wifi Cracker placeholder")
             input("\nPress enter to continue.")
 
-        # Selection: 10 - Opens the IP Info applet 
+        # Selection: 10 - Opens the IP Info applet
         elif value == 10:
             IPInfo()
 
-    # If the user enters something they"re not supposed to
+        # Selection: 13 - Opens OSINT Framework - Placeholder
+        elif value == 13:
+            ClearScreen()
+            PrintMessage("OSINT Framework placeholder")
+            input("\nPress enter to continue.")
+
+    # If the user enters something they're not supposed to
     except ValueError:
         try:
             value = float(userInput)
@@ -78,31 +84,29 @@ def IPInfo():
     netInfo = []
     # Returns a list of network names and IP addresses
     # List indexes:
-    # 0 = hostname
+    # 0 = host name
     # 1 = private IP address
     # 2 = public IP address
     def GetIP():
         # Get the hostname of the computer
         hostname = socket.gethostname()
-        # Get the private IP address starting with "192.168."
-        privateIP = [ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if ip.startswith("192.168.")][:1]
+        # Get the private IP address starting with '192.168.'
+        privateIP = [ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if ip.startswith('192.168.')][:1]
         # Get the public IP address
-        publicIP = get("https://api.ipify.org").text
+        publicIP = get('https://api.ipify.org').text
         netInfo.insert(0, hostname)
         netInfo.insert(1, privateIP[0])
         netInfo.insert(2, publicIP)
 
     ClearScreen()
     GetIP()
-    title = open(os.path.join(titleDir, "title-ipinfo.txt"))
-    PrintMessage(title.read(), "none", Color.BrightCyan)
-    PrintMessage("Your computer name is: " + netInfo[0])
-    PrintMessage("Private IP address is: " + netInfo[1])
-    PrintMessage("Public IP address is: " + netInfo[2])
+    title = open(os.path.join(titleDir, 'title-ipinfo.txt'))
+    PrintMessage(title.read(), 'none', Color.BrightCyan)
+    PrintMessage(f"Your computer name is: {netInfo[0]}")
+    PrintMessage(f"Private IP address is: {netInfo[1]}")
+    PrintMessage(f"Public IP address is: {netInfo[2]}")
     input("\nPress enter to continue.")
     
-# Fixes a weird bug in Windows command line to allow printing of colors. 
-ClearScreen()
-
-while True:
-    MainDashboard()
+if __name__ == '__main__':
+    while True:
+        MainDashboard()

@@ -1,7 +1,5 @@
 # Project Roanoke
-
 Project Roanoke is a command-line dashboard for some of the most popular Kali Linux tools. The dashboard also includes some useful custom applets to increase the ease of use of Kali Linux. 
-
 ## Requirements
 [Kali Linux](https://www.kali.org/)  
 [Python](https://www.python.org/)  
@@ -17,7 +15,6 @@ Go to the downloaded directory and run `project-roanoke.py`.
 python project-roanoke.py
 ```
 ## Usage
-![Image](https://i.imgur.com/rOncynF.png)
 ### Selecting An Application
 Using Project Roanoke is quite simple. Choose the application you want to run and enter the corresponding number.
 ### Using Applets
