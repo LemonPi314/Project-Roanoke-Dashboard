@@ -1,9 +1,9 @@
 # Project Roanoke
 Project Roanoke is a command-line dashboard for some of the most popular Kali Linux tools. The dashboard also includes some useful custom applets to increase the ease of use of Kali Linux. 
 ## Requirements
-[Kali Linux](https://www.kali.org/)  
-[Python](https://www.python.org/downloads/)  
-[`pyco`](https://test.pypi.org/project/pyco/)
+- [Kali Linux](https://www.kali.org/)  
+- [Python](https://www.python.org/downloads/)  
+- [`pyco`](https://test.pypi.org/project/pyco/)
 ## Installation
 Install the `pyco` package.
 ```bash
