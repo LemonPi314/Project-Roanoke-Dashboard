@@ -3,12 +3,9 @@ Project Roanoke is a command-line dashboard for some of the most popular Kali Li
 ## Requirements
 - [Kali Linux](https://www.kali.org/)  
 - [Python](https://www.python.org/downloads/)  
-- [`pyco`](https://test.pypi.org/project/pyco/)
+- [`pyco`](https://duplexes.me/pyco/)
 ## Installation
-Install the `pyco` package.
-```bash
-pip install -i https://test.pypi.org/simple/ pyco
-```
+Install the [`pyco`](https://duplexes.me/pyco/) package using [pip](https://pip.pypa.io/).
 Download the files from this web page.
 Go to the downloaded directory and run `project-roanoke.py`.
 ```bash
